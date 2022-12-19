@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.tcenter{
+   text-align:center;
+}
+</style>
+</head>
+<body>
+<div class="tcenter">
+<h1>COUNTER</h1>
+<p style="font-size:60px;" Id="count"><b>0</b></p>
+<button onclick="decreament()">DECREASE</button>
+<button onclick="reset()">RESET</button>
+<button onclick="increament()">INCREASE</button>
+<script>
+let c=document.getElementById("count");
+function increament(){
+   c.textContent=parseInt(c.textContent)+1;
+   if (parseInt(c.textContent)>0){
+       c.style.color="green";
+   }
+   else if (parseInt(c.textContent)<0){
+       c.style.color="red";
+   }
+   else{
+       c.style.color="black";
+   }
+}
+function decreament(){
+   c.textContent=parseInt(c.textContent)-1;
+   if (parseInt(c.textContent)>0){
+       c.style.color="green";
+   }
+   else if (parseInt(c.textContent)<0){
+       c.style.color="red";
+   }
+   else{
+       c.style.color="black";
+   }
+}
+function reset(){
+   c.textContent=0;
+   c.style.color="black";
+}
+</script>
+</body>
+</html>
